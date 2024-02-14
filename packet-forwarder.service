@@ -1,0 +1,12 @@
+# /etc/systemd/system/packet-forwarder-service
+[Unit]
+Description=Semtech packet-forwarder
+
+[Service]
+WorkingDirectory=/home/pi/sx1302_hal/bin
+ExecStart=/home/pi/sx1302_hal/bin/start.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
